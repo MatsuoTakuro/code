@@ -37,6 +37,8 @@ jobs:
           docker image push ${{ secrets.DOCKER_USERNAME }}/gitops-go-app:${{ github.run_number }}
 
         # values.yamlの更新、新規ブランチ作成、プッシュ、プルリクエスト
+        # TODO: #1 以下のGitOps Workflowエラーに対応する。GH_USERNAMEのSecrets設定側が原因では無いことは確認。
+        # fatal: could not read Username for 'https://github.com': No such device or address
       - name: Update values.yaml & Pull Request to Config Repository
         run: |
           # GitHubログイン
