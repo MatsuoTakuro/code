@@ -12,6 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+    # USERNAMEをDOCKER_USERNAMEとGH_USERNAMEに分けている
         # イメージビルド
       - name: Build an image from Dockerfile
         run: |
