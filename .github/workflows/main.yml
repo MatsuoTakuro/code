@@ -40,7 +40,7 @@ jobs:
         # values.yamlの更新、新規ブランチ作成、プッシュ、プルリクエスト
       - name: Update values.yaml & Pull Request to Config Repository
         env:
-          GH_USERNAME: ${{ secrets.GH_USERNAME }}
+          GH_USERNAME: MatsuoTakuro
         run: |
           # GitHubログイン
           echo -e "machine github.com\nlogin ${{ secrets.GH_USERNAME }}\npassword ${{ secrets.GH_PASSWORD }}" > ~/.netrc
